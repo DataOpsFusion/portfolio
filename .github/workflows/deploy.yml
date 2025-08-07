@@ -1,4 +1,4 @@
-name: Build and Deploy MkDocs
+name: Build & Deploy MkDocs
 
 on:
   push:
@@ -15,23 +15,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+        with: python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
-          pip install mkdocs-material
-          pip install "mkdocs-material[imaging]"
+          pip install mkdocs-material "mkdocs-material[imaging]"
 
       - name: Build site
-        run: mkdocs build --site-dir=./public
+        run: mkdocs build --site-dir=public
 
-      - name: Configure Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload site artifact
+      - name: Upload site
         uses: actions/upload-pages-artifact@v1
         with:
           path: public
@@ -40,5 +38,5 @@ jobs:
     needs: build-deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Pages
+      - name: Deploy to Pages
         uses: actions/deploy-pages@v1
