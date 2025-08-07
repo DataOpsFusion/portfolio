@@ -1,0 +1,101 @@
+site_name: DataOpsFusion Blog
+site_description: "Sharing thoughts and learnings about Data, DevOps, and AI"
+site_author: "DataOpsFusion"
+site_url: "https://dataopsfusion.github.io"
+
+theme:
+  name: "material"
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep-purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep-purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/account-circle
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - attr_list
+  - md_in_html
+
+nav:
+  - Blogs:
+      - Overview: blogs/index.md
+      - Thoughts On AI: blogs/thoughts-on-ai.md
+      - How to use AI effectively: blogs/how-to-use-ai.md
+  - AI & ML:
+      - Overview: courses/ai-ml/index.md
+      - Deep Learning: courses/ai-ml/deep-learning-basics.md
+      - MLOps: courses/ai-ml/mlops-fundamentals.md
+      - Deployment: courses/ai-ml/model-deployment.md
+  - Data Engineering:
+      - Overview: courses/data-engineering/index.md
+      - Pipelines: courses/data-engineering/pipeline-design.md
+      - Databases: courses/data-engineering/database-fundamentals.md
+      - Data Quality: courses/data-engineering/data-quality.md
+  # - DevOps:
+  #     - Overview: courses/devops/index.md
+  #     - Infrastructure as Code: courses/devops/infrastructure-as-code.md
+  #     - Containers: courses/devops/container-orchestration.md
+  #     - Monitoring: courses/devops/monitoring-logging.md
+  # - CI/CD:
+  #     - Overview: courses/cicd/index.md
+  #     - Pipeline Design: courses/cicd/pipeline-design.md
+  #     - Testing: courses/cicd/testing-strategies.md
+  #     - Deployment: courses/cicd/deployment-automation.md
+  # - SysAdmin:
+  #     - Windows: courses/sysadmin/windows.md
+  #     - Linux: courses/sysadmin/linux-fundamentals.md
+  #     - Networking: courses/sysadmin/network-basics.md
+  #     - Bash/Shell: courses/sysadmin/bash-shell.md
+  # - Projects: projects/index.md
+  - Contact: contact.md
+  - About: about.md
+
+plugins:
+  - search
+  - social
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DataOpsFusion
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/dataopsfusion
+    - icon: fontawesome/solid/envelope
+      link: mailto:contact@dataopsfusion.com
+
+copyright: Copyright &copy; 2025 DataOpsFusion
