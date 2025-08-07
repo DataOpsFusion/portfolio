@@ -1,7 +1,7 @@
 site_name: DataOpsFusion Blog
 site_description: "Sharing thoughts and learnings about Data, DevOps, and AI"
 site_author: "DataOpsFusion"
-site_url: "https://dataopsfusion.github.io"
+site_url: "https://dataopsfusion.github.io/portfolio/"
 
 theme:
   name: "material"
